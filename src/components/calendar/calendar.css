@@ -1,0 +1,38 @@
+th {
+  width: 14.28%;
+  font-size: 22px;
+  text-align: center;
+}
+td {
+  width: 14.28%;
+  height: 80px;
+  max-height: 80px;
+  text-align: center;
+}
+.custom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 15; /* Ensure the overlay is above other content */
+}
+
+.custom-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  outline: none;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: lightGray;
+  z-index: 20; /* Ensure the modal itself is above the overlay */
+}

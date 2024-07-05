@@ -1,0 +1,63 @@
+.nav_blur {
+  background-color: black;
+}
+
+.nav_first {
+  background-color: transparent;
+}
+.nav_items:hover + header.nav_blur,
+header.nav_blur:hover {
+  border-bottom: 1px outset #9ca3af;
+}
+
+.nav_drop {
+  z-index: 50;
+  max-height: 0px;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  right: 0;
+  height: 134px;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.nav_items > li > a {
+  width: 100%;
+}
+
+.nav_items > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav_items > li:hover {
+  border-bottom: 1.3px outset rgb(225, 225, 225);
+}
+
+/* Updated CSS to handle hover */
+.nav_items:hover + .nav_drop,
+.nav_drop:hover {
+  max-height: 134px;
+}
+
+.active {
+  border-bottom: 1.3px outset rgb(225, 225, 225);
+}
+
+.nav_items {
+  display: none;
+}
+.mobile_nav{
+  display: flex;
+}
+
+@media (min-width: 1120px) {
+  .nav_items {
+    display: flex;
+  }
+  .mobile_nav{
+    display: none;
+  }
+}
