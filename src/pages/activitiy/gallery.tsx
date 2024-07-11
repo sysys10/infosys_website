@@ -1,18 +1,11 @@
 'use client'
-import * as React from 'react';
-import { useState } from 'react';
-import Card from '@/components/ui/card';
+import { GalleryItem } from '@/types/gallery';
 import Modal from 'react-modal'
-import { TfiClose } from "react-icons/tfi";
 import Banner from '@/components/ui/banner';
-
-type GalleryItem = {
-  id: number;
-  title: string;
-  date: string;
-  desc?: string;
-  imgurl: string[];
-}
+import Card from '@/components/ui/card';
+import { galleryModalSelectState, galleryModalState } from '@/atoms/atom';
+import { useRecoilState } from 'recoil';
+import { TfiClose } from "react-icons/tfi";
 
 const galleryData: GalleryItem[] = [
   { id: 0, title: "~~행사 진행!", date: "2024.03.16", desc: "글 내용 입니다.", imgurl: ["images/1.jpg", "images/2.jpg", "images/bg_1.jpg"] },
@@ -27,8 +20,8 @@ const galleryData: GalleryItem[] = [
 ];
 
 const Gallery: React.FC = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [gallerySelect, setGallerySelect] = useState<GalleryItem | null>(null);
+  const [modalOpen, setModalOpen] = useRecoilState(galleryModalState)
+  const [gallerySelect, setGallerySelect] = useRecoilState(galleryModalSelectState)
   const handleClick = (gallery: GalleryItem) => {
     setModalOpen(true);
     setGallerySelect(gallery);
@@ -39,12 +32,12 @@ const Gallery: React.FC = () => {
       <div className="m-auto mt-20 h-fit py-10 w-full mobile:w-[1000px] flex flex-col justify-center">
         <h1 className="m-auto font-extrabold text-4xl font-pretendard my-20 ">정시템 갤러리</h1>
         <div className='w-fit m-auto grid grid-cols-1 md:grid-cols-2 mobile:grid-cols-3 content gap-5 gap-x-10'>
-          {galleryData.map((gallery, index) => {
-            return (
-              <div key={`gallery-${index}`} onClick={() => { handleClick(gallery) }}>
-                <Card gallery={gallery} />
-              </div>);
-          })}
+          {galleryData.map((gallery, index) =>
+          (
+            <div key={`gallery-${index}`} onClick={() => { handleClick(gallery) }}>
+              <Card gallery={gallery} />
+            </div>
+          ))}
         </div>
       </div>
       {
@@ -85,7 +78,7 @@ const Gallery: React.FC = () => {
                 <div className='flex flex-col gap-y-2'>
                   {gallerySelect.imgurl.map((img: string, idx: number) => {
                     return (
-                      <img key={`modalImg-${idx}`} className='rounded-2xl' src={`/assets/${img}`} alt='image' width={1000} height={100}/>)
+                      <img key={`modalImg-${idx}`} className='rounded-2xl' src={`/assets/${img}`} alt='image' width={1000} height={100} />)
                   })}
                 </div>
               </div>

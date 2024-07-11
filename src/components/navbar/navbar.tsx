@@ -1,5 +1,5 @@
 "use client";
-import GetScrollY from "@/hooks/getScrollY.jsx";
+import GetScrollY from "@/hooks/getScrollY";
 import React, { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -14,7 +14,7 @@ const NavigationBar = () => {
     const nav_bg = scrollY > 0  ? "nav_blur" : "nav_first";
     const [menu, setMenu] = useState(false);
     return (
-        <header className={`z-50 fixed top-0 left-0 right-0 h-[60px] ${nav_bg}`}>
+        <header className={`z-50 fixed top-0 left-0 right-0 h-[60px] ${nav_bg} transition-all duration-300`}>
             <nav className="flex justify-between w-full max-w-[1280px] m-auto h-[60px] items-center text-white">
                 <Link to="/" className={`mobile:w-[270px] w-[180px] ml-4`}>
                     <img src="/assets/images/logo.png" width={270} height={60} alt="Logo" />

@@ -10,12 +10,12 @@ interface MotionEventProps {
 
 const MotionEvent: React.FC<MotionEventProps> = ({ children, ...props }) => {
     return (
-        <motion.div             initial={{ scaleX: 0, originX: 0 }}
-        whileInView={{ scaleX: 1,originX:0 }} transition={{ duration: 0.5 }}
+        <motion.div initial={{ scaleX: 0, originX: 0 }}
+            whileInView={{ scaleX: 1, originX: 0 }} transition={{ duration: 0.5 }}
             {...props}>
             {children}
         </motion.div>
     );
 };
 
-export default MotionEvent;
+export { MotionEvent };

@@ -1,18 +1,24 @@
 import { Route, Routes } from 'react-router-dom'
-import './App.css'
 import Home from '@/pages/home'
 import Gallery from '@/pages/activitiy/gallery'
 import NavigationBar from '@/components/navbar/navbar'
+import { BrowserRouter } from 'react-router-dom'
+
 function App() {
   return (
-    <div>
-      <NavigationBar/>
+    <BrowserRouter>
+      <NavigationBar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/activity/gallery' element={<Gallery/>}/>
+        <Route path='/about'>
+          <Route path='organization' />
+        </Route>
+        <Route path='/activity'>
+          <Route path='gallery' element={<Gallery />} />
+        </Route>
       </Routes>
-      </div>
-    
+    </BrowserRouter>
+
   )
 }
 
