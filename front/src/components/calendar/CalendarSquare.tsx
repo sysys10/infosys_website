@@ -55,7 +55,7 @@ export const CalendarSquare: React.FC<CalendarSquareProps> = React.memo(({ d, yy
                 <div
                     className={`cursor-pointer h-36 flex flex-col items-center pt-2 w-[14.2857142857%]`}
                 >
-                    <div className="border-b-gray-400 border-b w-[98%] text-center text-gray-500">{dd}</div>
+                    <div className="border-b-gray-400 border-b w-[98%] text-center text-gray-600">{dd}</div>
                     <div className="w-full h-full text-xs mobile:text-sm font-pretendard relative">
                         {dayEvents.map((event, index) => {
                             return (

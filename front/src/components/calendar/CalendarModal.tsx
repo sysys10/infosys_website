@@ -14,7 +14,7 @@ export const CalendarModal = ({ selectDate }: { selectDate: Event[] | null }) =>
 
                 return (
                     <div className="flex flex-col">
-                        <div className="flex mt-4 justify-between font-pretendard">
+                        <div className="flex-col mobile:flex mt-4 justify-between font-pretendard">
                             <div className="flex text-xl flex-1 mr-2 border-r border-r-gray-300">
                                 <FaCaretDown className="animate-bounce mt-2" onClick={() => { onDownClick(i) }} />
                                 <p className="ml-4">{v.title}</p>

@@ -1,1 +1,1 @@
-export const barColor: string[] = ["#8a817c", "#bcb8b1", "#cbeef3", "#e0afa0", "#577590", "#f49cbb", "#e0aaff"];
+export const barColor: string[] = ["#FFF8DB", "#FFC7ED", "#BBE9FF", "#D6E9AA", "#B1AFFF", "#FFC39B", "#e0aaff"];

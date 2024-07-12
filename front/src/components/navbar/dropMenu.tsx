@@ -51,11 +51,12 @@ const DropMenu = ({ nav_bg, navRef }:DropMenuProps) => {
             <Link to="/notice" className="w-[160px] flex flex-col justify-center text-sm font-light hover:cursor-pointer hover:drop-shadow-white-lg transition-all duration-200">
               공지사항
             </Link>
-            <Link to="/notice/vote" className="w-[160px] flex flex-col justify-center text-sm font-light hover:cursor-pointer hover:drop-shadow-white-lg transition-all duration-200">
-              투표
-            </Link>
+          
             <Link to="/notice/settlement" className="w-[160px] flex flex-col justify-center text-sm font-light hover:cursor-pointer hover:drop-shadow-white-lg transition-all duration-200">
               결산안
+            </Link>
+            <Link to="/notice/faq" className="w-[160px] flex flex-col justify-center text-sm font-light hover:cursor-pointer hover:drop-shadow-white-lg transition-all duration-200">
+              FAQ
             </Link>
           </ul>
         </div>

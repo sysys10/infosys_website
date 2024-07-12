@@ -1,79 +1,558 @@
-import {Events} from '@/types/calendar'
+import { Events } from "@/types/calendar";
 
-export const events: Events ={
-
-    "2024": {
-        "6": {
-            "1": [
-                { "title": "수강신청", "startDate": new Date("2024-07-01"), "endDate": new Date("2024-07-03"), "color": 1, "desc": " " },
-                { "title": "이벤트 1", "startDate": new Date("2024-07-01"), "endDate": new Date("2024-07-02"), "color": 2, "desc": " " }
-            ],
-            "2": [
-                { "title": "수강신청", "startDate": new Date("2024-07-01"), "endDate": new Date("2024-07-03"), "color": 1, "desc": " " },
-                { "title": "이벤트 1", "startDate": new Date("2024-07-01"), "endDate": new Date("2024-07-02"), "color": 2, "desc": " " }
-            ],
-            "3": [
-                { "title": "수강신청", "startDate": new Date("2024-07-01"), "endDate": new Date("2024-07-03"), "color": 3, "desc": " " },
-                { "title": "밥", "startDate": new Date("2024-07-03"), "endDate": new Date("2024-07-03"), "color": 5, "desc": " " }
-            ],
-            "5": [
-                { "title": "웹사이트 회의", "startDate": new Date("2024-07-05"), "endDate": new Date("2024-07-05"), "color": 1 }
-            ],
-            "8": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-08"), "endDate": new Date("2024-07-18"), "color": 2, "desc": " " }
-            ],
-            "9": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-08"), "endDate": new Date("2024-07-18"), "color": 2, "desc": " " }
-            ],
-            "10": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-08"), "endDate": new Date("2024-07-18"), "color": 2, "desc": " " }
-            ],
-            "11": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-08"), "endDate": new Date("2024-07-18"), "color": 2, "desc": " " }
-            ],
-            "12": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-08"), "endDate": new Date("2024-07-18"), "color": 2, "desc": " " }
-            ],
-            "13": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-08"), "endDate": new Date("2024-07-18"), "color": 2, "desc": "안녕하세요~" },
-                { "title": "밥먹기", "startDate": new Date("2024-07-13"), "endDate": new Date("2024-07-13"), "color": 3, "desc": "안녕하세요~" }
-            ],
-            "14": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-08"), "endDate": new Date("2024-07-18"), "color": 2, "desc": " " }
-            ],
-            "15": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-08"), "endDate": new Date("2024-07-18"), "color": 2, "desc": " " }
-            ],
-            "16": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-08"), "endDate": new Date("2024-07-18"), "color": 2, "desc": " " }
-            ],
-            "17": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-08"), "endDate": new Date("2024-07-18"), "color": 2, "desc": " " }
-            ],
-            "18": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-08"), "endDate": new Date("2024-07-18"), "color": 2, "desc": " " }
-            ],
-            "20": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-20"), "endDate": new Date("2024-07-23"), "color": 1, "desc": " " }
-            ],
-            "21": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-20"), "endDate": new Date("2024-07-23"), "color": 1, "desc": " " }
-            ],
-            "22": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-20"), "endDate": new Date("2024-07-23"), "color": 1, "desc": " " }
-            ],
-            "23": [
-                { "title": "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구", "startDate": new Date("2024-07-20"), "endDate": new Date("2024-07-23"), "color": 1, "desc": " " }
-            ],
-            "31": [
-                { "title": "밥먹기", "startDate": new Date("2024-07-31"), "endDate": new Date("2024-07-31"), "color": 6, "desc": " " }
-            ]
+export const events: Events = {
+  "2024": {
+    "3": {
+      "1": [],
+      "2": [],
+      "3": [
+        {
+          title: "제목 학원 행사",
+          startDate: new Date("2024-04-03"),
+          endDate: new Date("2024-04-14"),
+          color: 0,
+          desc: " ",
         },
-        "7": {
-            "1": [
-                { "title": "밥먹기", "startDate": new Date("2024-07-01"), "endDate": new Date("2024-07-01"), "color": 1, "desc": " " }
-            ]
-        }
-    }
-
-}
+      ],
+      "4": [
+        {
+          title: "제목 학원 행사",
+          startDate: new Date("2024-04-03"),
+          endDate: new Date("2024-04-14"),
+          color: 0,
+          desc: " ",
+        },
+        {
+          title: "벛꽃 행사",
+          startDate: new Date("2024-04-04"),
+          endDate: new Date("2024-04-13"),
+          color: 1,
+          desc: "뭐머 해주세용",
+        },
+      ],
+      "5": [
+        {
+          title: "제목 학원 행사",
+          startDate: new Date("2024-04-03"),
+          endDate: new Date("2024-04-14"),
+          color: 0,
+          desc: " ",
+        },
+        {
+          title: "벛꽃 행사",
+          startDate: new Date("2024-04-04"),
+          endDate: new Date("2024-04-13"),
+          color: 1,
+          desc: "뭐머 해주세용",
+        },
+        {
+          title: "중간 평가 기간",
+          startDate: new Date("2024-04-05"),
+          endDate: new Date("2024-04-08"),
+          color: 2,
+          desc: "뭐머 해주세용",
+        },
+      ],
+      "6": [
+        {
+          title: "제목 학원 행사",
+          startDate: new Date("2024-04-03"),
+          endDate: new Date("2024-04-14"),
+          color: 0,
+          desc: " ",
+        },
+        {
+          title: "벛꽃 행사",
+          startDate: new Date("2024-04-04"),
+          endDate: new Date("2024-04-13"),
+          color: 1,
+          desc: "뭐머 해주세용",
+        },
+        {
+          title: "중간 평가 기간",
+          startDate: new Date("2024-04-05"),
+          endDate: new Date("2024-04-08"),
+          color: 2,
+          desc: "뭐머 해주세용",
+        },
+      ],
+      "7": [
+        {
+          title: "제목 학원 행사",
+          startDate: new Date("2024-04-03"),
+          endDate: new Date("2024-04-14"),
+          color: 0,
+          desc: " ",
+        },
+        {
+          title: "벛꽃 행사",
+          startDate: new Date("2024-04-04"),
+          endDate: new Date("2024-04-13"),
+          color: 1,
+          desc: "뭐머 해주세용",
+        },
+        {
+          title: "중간 평가 기간",
+          startDate: new Date("2024-04-05"),
+          endDate: new Date("2024-04-08"),
+          color: 2,
+          desc: "뭐머 해주세용",
+        },
+      ],
+      "8": [
+        {
+          title: "제목 학원 행사",
+          startDate: new Date("2024-04-03"),
+          endDate: new Date("2024-04-14"),
+          color: 0,
+          desc: " ",
+        },
+        {
+          title: "벛꽃 행사",
+          startDate: new Date("2024-04-04"),
+          endDate: new Date("2024-04-13"),
+          color: 1,
+          desc: "뭐머 해주세용",
+        },
+        {
+          title: "중간 평가 기간",
+          startDate: new Date("2024-04-05"),
+          endDate: new Date("2024-04-08"),
+          color: 2,
+          desc: "뭐머 해주세용",
+        },
+      ],
+      "9": [
+        {
+          title: "제목 학원 행사",
+          startDate: new Date("2024-04-03"),
+          endDate: new Date("2024-04-14"),
+          color: 0,
+          desc: " ",
+        },
+        {
+          title: "벛꽃 행사",
+          startDate: new Date("2024-04-04"),
+          endDate: new Date("2024-04-13"),
+          color: 1,
+          desc: "뭐머 해주세용",
+        },
+      ],
+      "10": [
+        {
+          title: "제목 학원 행사",
+          startDate: new Date("2024-04-03"),
+          endDate: new Date("2024-04-14"),
+          color: 0,
+          desc: " ",
+        },
+        {
+          title: "벛꽃 행사",
+          startDate: new Date("2024-04-04"),
+          endDate: new Date("2024-04-13"),
+          color: 1,
+          desc: "뭐머 해주세용",
+        },
+      ],
+      "11": [
+        {
+          title: "제목 학원 행사",
+          startDate: new Date("2024-04-03"),
+          endDate: new Date("2024-04-14"),
+          color: 0,
+          desc: " ",
+        },
+        {
+          title: "벛꽃 행사",
+          startDate: new Date("2024-04-04"),
+          endDate: new Date("2024-04-13"),
+          color: 1,
+          desc: "뭐머 해주세용",
+        },
+      ],
+      "12": [
+        {
+          title: "제목 학원 행사",
+          startDate: new Date("2024-04-03"),
+          endDate: new Date("2024-04-14"),
+          color: 0,
+          desc: " ",
+        },
+        {
+          title: "벛꽃 행사",
+          startDate: new Date("2024-04-04"),
+          endDate: new Date("2024-04-13"),
+          color: 1,
+          desc: "뭐머 해주세용",
+        },
+        {
+          title: "23년후기 졸업 예정자 졸업 논문 제출 기간",
+          startDate: new Date("2024-04-12"),
+          endDate: new Date("2024-04-16"),
+          color: 4,
+          desc: " ",
+        },
+      ],
+      "13": [
+        {
+          title: "제목 학원 행사",
+          startDate: new Date("2024-04-03"),
+          endDate: new Date("2024-04-14"),
+          color: 0,
+          desc: " ",
+        },
+        {
+          title: "벛꽃 행사",
+          startDate: new Date("2024-04-04"),
+          endDate: new Date("2024-04-13"),
+          color: 1,
+          desc: "뭐머 해주세용",
+        },
+        {
+          title: "23년후기 졸업 예정자 졸업 논문 제출 기간",
+          startDate: new Date("2024-04-12"),
+          endDate: new Date("2024-04-16"),
+          color: 4,
+          desc: " ",
+        },
+      ],
+      "14": [
+        {
+          title: "23년후기 졸업 예정자 졸업 논문 제출 기간",
+          startDate: new Date("2024-04-12"),
+          endDate: new Date("2024-04-16"),
+          color: 4,
+          desc: " ",
+        },
+        {
+          title: "제목 학원 행사",
+          startDate: new Date("2024-04-03"),
+          endDate: new Date("2024-04-14"),
+          color: 0,
+          desc: " ",
+        },
+      ],
+      "15": [
+        {
+          title: "23년후기 졸업 예정자 졸업 논문 제출 기간",
+          startDate: new Date("2024-04-12"),
+          endDate: new Date("2024-04-16"),
+          color: 4,
+          desc: " ",
+        },
+      ],
+      "16": [
+        {
+          title: "23년후기 졸업 예정자 졸업 논문 제출 기간",
+          startDate: new Date("2024-04-12"),
+          endDate: new Date("2024-04-16"),
+          color: 4,
+          desc: " ",
+        },
+        {
+          title: "간식 행사",
+          startDate: new Date("2024-04-16"),
+          endDate: new Date("2024-04-16"),
+          color: 5,
+          desc: " ",
+        },
+      ],
+      "17": [],
+      "18": [],
+      "19": [
+        {
+          title: "짝선짝후 미션 마감",
+          startDate: new Date("2024-04-19"),
+          endDate: new Date("2024-04-19"),
+          color: 6,
+          desc: " ",
+        },
+      ],
+      "20": [],
+      "21": [],
+      "22": [
+        {
+          title: "1학기 중간 고사 기간",
+          startDate: new Date("2024-04-22"),
+          endDate: new Date("2024-04-26"),
+          color: 4,
+          desc: " ",
+        },
+        {
+          title: "입대휴학자의",
+          startDate: new Date("2024-04-22"),
+          endDate: new Date("2024-04-22"),
+          color: 1,
+          desc: " ",
+        },
+        {
+          title: "학기 인정 기준일",
+          startDate: new Date("2024-04-22"),
+          endDate: new Date("2024-04-22"),
+          color: 2,
+          desc: " ",
+        },
+      ],
+      "23": [
+        {
+          title: "1학기 중간 고사 기간",
+          startDate: new Date("2024-04-22"),
+          endDate: new Date("2024-04-26"),
+          color: 4,
+          desc: " ",
+        },
+      ],
+      "24": [
+        {
+          title: "1학기 중간 고사 기간",
+          startDate: new Date("2024-04-22"),
+          endDate: new Date("2024-04-26"),
+          color: 4,
+          desc: " ",
+        },
+      ],
+      "25": [
+        {
+          title: "1학기 중간 고사 기간",
+          startDate: new Date("2024-04-22"),
+          endDate: new Date("2024-04-26"),
+          color: 4,
+          desc: " ",
+        },
+      ],
+      "26": [
+        {
+          title: "1학기 중간 고사 기간",
+          startDate: new Date("2024-04-22"),
+          endDate: new Date("2024-04-26"),
+          color: 4,
+          desc: " ",
+        },
+      ],
+      "27": [],
+      "28": [],
+      "29": [],
+      "30": [],
+    },
+    "6": {
+      "1": [
+        {
+          title: "수강신청",
+          startDate: new Date("2024-07-01"),
+          endDate: new Date("2024-07-03"),
+          color: 1,
+          desc: " ",
+        },
+        {
+          title: "이벤트 1",
+          startDate: new Date("2024-07-01"),
+          endDate: new Date("2024-07-02"),
+          color: 2,
+          desc: " ",
+        },
+      ],
+      "2": [
+        {
+          title: "수강신청",
+          startDate: new Date("2024-07-01"),
+          endDate: new Date("2024-07-03"),
+          color: 1,
+          desc: " ",
+        },
+        {
+          title: "이벤트 1",
+          startDate: new Date("2024-07-01"),
+          endDate: new Date("2024-07-02"),
+          color: 2,
+          desc: " ",
+        },
+      ],
+      "3": [
+        {
+          title: "수강신청",
+          startDate: new Date("2024-07-01"),
+          endDate: new Date("2024-07-03"),
+          color: 3,
+          desc: " ",
+        },
+        {
+          title: "밥",
+          startDate: new Date("2024-07-03"),
+          endDate: new Date("2024-07-03"),
+          color: 5,
+          desc: " ",
+        },
+      ],
+      "5": [
+        {
+          title: "웹사이트 회의",
+          startDate: new Date("2024-07-05"),
+          endDate: new Date("2024-07-05"),
+          color: 1,
+        },
+      ],
+      "8": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-08"),
+          endDate: new Date("2024-07-18"),
+          color: 2,
+          desc: " ",
+        },
+      ],
+      "9": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-08"),
+          endDate: new Date("2024-07-18"),
+          color: 2,
+          desc: " ",
+        },
+      ],
+      "10": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-08"),
+          endDate: new Date("2024-07-18"),
+          color: 2,
+          desc: " ",
+        },
+      ],
+      "11": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-08"),
+          endDate: new Date("2024-07-18"),
+          color: 2,
+          desc: " ",
+        },
+      ],
+      "12": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-08"),
+          endDate: new Date("2024-07-18"),
+          color: 2,
+          desc: " ",
+        },
+      ],
+      "13": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-08"),
+          endDate: new Date("2024-07-18"),
+          color: 2,
+          desc: "안녕하세요~",
+        },
+        {
+          title: "밥먹기",
+          startDate: new Date("2024-07-13"),
+          endDate: new Date("2024-07-13"),
+          color: 3,
+          desc: "안녕하세요~",
+        },
+      ],
+      "14": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-08"),
+          endDate: new Date("2024-07-18"),
+          color: 2,
+          desc: " ",
+        },
+      ],
+      "15": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-08"),
+          endDate: new Date("2024-07-18"),
+          color: 2,
+          desc: " ",
+        },
+      ],
+      "16": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-08"),
+          endDate: new Date("2024-07-18"),
+          color: 2,
+          desc: " ",
+        },
+      ],
+      "17": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-08"),
+          endDate: new Date("2024-07-18"),
+          color: 2,
+          desc: " ",
+        },
+      ],
+      "18": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-08"),
+          endDate: new Date("2024-07-18"),
+          color: 2,
+          desc: " ",
+        },
+      ],
+      "20": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-20"),
+          endDate: new Date("2024-07-23"),
+          color: 1,
+          desc: " ",
+        },
+      ],
+      "21": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-20"),
+          endDate: new Date("2024-07-23"),
+          color: 1,
+          desc: " ",
+        },
+      ],
+      "22": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-20"),
+          endDate: new Date("2024-07-23"),
+          color: 1,
+          desc: " ",
+        },
+      ],
+      "23": [
+        {
+          title: "제 3차 공학대회의 정보시스템학과 어쩌구 저쩌구",
+          startDate: new Date("2024-07-20"),
+          endDate: new Date("2024-07-23"),
+          color: 1,
+          desc: " ",
+        },
+      ],
+      "31": [
+        {
+          title: "밥먹기",
+          startDate: new Date("2024-07-31"),
+          endDate: new Date("2024-07-31"),
+          color: 6,
+          desc: " ",
+        },
+      ],
+    },
+    "7": {
+      "1": [
+        {
+          title: "밥먹기",
+          startDate: new Date("2024-07-01"),
+          endDate: new Date("2024-07-01"),
+          color: 1,
+          desc: " ",
+        },
+      ],
+    },
+  },
+};
