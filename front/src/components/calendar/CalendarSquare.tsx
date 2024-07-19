@@ -32,7 +32,7 @@ export const CalendarSquare: React.FC<CalendarSquareProps> = React.memo(({ d, yy
                         return (
                             <MotionEvent
                                 key={`events-${index}`}
-                                className="h-5 mt-1 pl-4 text-nowrap overflow-visible rounded-md relative truncate"
+                                className="h-5 mt-1 md:text-sm text-xs items-center flex px-1 md:px-3 text-nowrap overflow-visible rounded-md relative truncate"
                                 style={{
                                     backgroundColor: eventFlag !== 3 ? barColor[event.color] : undefined,
                                     width: `${eventFlag === 1 ? (Math.min(7 - Day, eventLength)) * 100 : eventFlag === 2 ? (Math.min(7 - Day, eventLength)) * 100 : 100}%`,
@@ -56,47 +56,15 @@ export const CalendarSquare: React.FC<CalendarSquareProps> = React.memo(({ d, yy
                     className={`cursor-pointer h-36 flex flex-col items-center pt-2 w-[14.2857142857%]`}
                 >
                     <div className="border-b-gray-400 border-b w-[98%] text-center text-gray-600">{dd}</div>
-                    <div className="w-full h-full text-xs mobile:text-sm font-pretendard relative">
-                        {dayEvents.map((event, index) => {
-                            return (
-                                <MotionEvent
-                                    key={`prev-${index}`}
-                                    className="h-5 mt-1 rounded-md px-4 overflow-visible flex items-center"
-                                    style={{
-                                        backgroundColor: `${barColor[event.color]}`,
-                                        width: '100%',
-                                        position: 'relative',
-                                    }}
-                                >
-                                    <p className="truncate"> {event.startDate.getDate() === dd && event.title}</p>
-                                </MotionEvent>)
-                        })}
-                    </div>
                 </div>
             )
         } else {
             const dd = d - daysInMonth;
-            const dayEvents = events[yy]?.[mm + 1]?.[dd] || [];
-
             return (<div
                 className={`cursor-pointer flex flex-col items-center h-36 pt-2 w-[14.2857142857%]`}
             >
                 <div className="border-b-gray-400 border-b w-[98%] text-center text-gray-500">{d - daysInMonth}</div>
                 <div className="w-full h-full text-xs mobile:text-sm font-pretendard relative">
-                    {dayEvents.map((event, index) => {
-                        return (
-                            <MotionEvent
-                                key={`next-${index}`}
-                                className="h-5 rounded-md mt-1 px-4 overflow-visible flex items-center"
-                                style={{
-                                    backgroundColor: `${barColor[event.color]}`,
-                                    width: '100%',
-                                    position: 'relative',
-                                }}
-                            >
-                                <p className="truncate"> {event.startDate.getDate() === dd && event.title}</p>
-                            </MotionEvent>)
-                    })}
                 </div>
             </div>)
 

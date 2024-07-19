@@ -29,11 +29,11 @@ export const CalendarDetail: React.FC<CalendarDetailProps> = ({
 
     return (
         <div className="w-full mt-4 max-w-[1120px] m-auto">
-            <div className="mt-2 text-black w-full relative z-10 border-black">
+            <div className="mt-2 text-black w-full relative text-xs mobile:text-base z-10 border-black">
                 <div className="border-y border-y-black leading-10 mb-3">
                     <div className="w-full flex text-center">
-                        {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map(day => (
-                            <span key={day} className="flex-1">{day}</span>
+                        {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day,idx) => (
+                            <span key={idx+200} className="flex-1">{day}</span>
                         ))}
                     </div>
                 </div>

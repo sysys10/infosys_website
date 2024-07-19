@@ -13,7 +13,6 @@ export const Calendar = () => {
 
     const yy = date.getFullYear();
     const mm = date.getMonth();
-    const dd = date.getDate();
 
     const onPrevClick = () => setDate(new Date(yy, mm - 1, 1));
     const onNextClick = () => setDate(new Date(yy, mm + 1, 1));
